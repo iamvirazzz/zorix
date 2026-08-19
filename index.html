@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZORIX | Manufacturing Details</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f3;
+    color:#101c2d;
+}
+
+.top{
+    height:5px;
+    background:#f5c400;
+}
+
+.container{
+    max-width:650px;
+    margin:auto;
+    padding:25px 18px 40px;
+}
+
+/* Header */
+
+.header{
+    background:#10294b;
+    border-radius:18px;
+    padding:28px 25px;
+    color:white;
+    text-align:center;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+.logo{
+    font-size:38px;
+    font-weight:900;
+    font-style:italic;
+    letter-spacing:-2px;
+}
+
+.tagline{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#f5c400;
+    margin-top:3px;
+    font-weight:bold;
+}
+
+.header-line{
+    width:45px;
+    height:3px;
+    background:#f5c400;
+    margin:18px auto;
+}
+
+.header h2{
+    font-size:20px;
+    margin-bottom:7px;
+}
+
+.header p{
+    font-size:12px;
+    color:#cbd4df;
+}
+
+/* Main */
+
+.card{
+    background:white;
+    margin-top:18px;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.title{
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#b08b00;
+    margin-bottom:18px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:15px 0;
+    border-bottom:1px solid #e8e8e8;
+}
+
+.info:last-child{
+    border-bottom:none;
+}
+
+.label{
+    color:#7b8189;
+    font-size:11px;
+}
+
+.value{
+    font-size:13px;
+    font-weight:bold;
+    text-align:right;
+}
+
+/* Manufacturing */
+
+.steps{
+    margin-top:5px;
+}
+
+.step{
+    display:flex;
+    gap:15px;
+    padding:17px 0;
+    border-bottom:1px solid #eee;
+}
+
+.step:last-child{
+    border-bottom:none;
+}
+
+.number{
+    min-width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#10294b;
+    color:#f5c400;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.step h3{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.step p{
+    color:#777;
+    font-size:11px;
+    line-height:1.6;
+}
+
+/* Footer */
+
+.footer{
+    text-align:center;
+    margin-top:22px;
+    color:#777;
+    font-size:9px;
+    line-height:1.7;
+}
+
+.footer strong{
+    color:#10294b;
+}
+
+.verified{
+    display:inline-block;
+    margin-top:10px;
+    padding:7px 13px;
+    border-radius:30px;
+    background:#10294b;
+    color:white;
+    font-size:9px;
+    font-weight:bold;
+}
+
+@media(max-width:450px){
+
+    .container{
+        padding:15px 12px 30px;
+    }
+
+    .header{
+        padding:25px 18px;
+    }
+
+    .logo{
+        font-size:34px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .info{
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top"></div>
+
+<div class="container">
+
+    <!-- BRAND HEADER -->
+
+    <div class="header">
+
+        <div class="logo">ZORIX</div>
+
+        <div class="tagline">
+            THE NEW ERA OF SPORTS
+        </div>
+
+        <div class="header-line"></div>
+
+        <h2>Manufacturing Details</h2>
+
+        <p>
+            Product manufacturing & quality information
+        </p>
+
+    </div>
+
+
+    <!-- MANUFACTURER DETAILS -->
+
+    <div class="card">
+
+        <div class="title">
+            MANUFACTURER INFORMATION
+        </div>
+
+        <div class="info">
+            <span class="label">Brand</span>
+            <span class="value">ZORIX</span>
+        </div>
+
+        <div class="info">
+            <span class="label">Manufactured By</span>
+            <span class="value">GK GARMENTS</span>
+        </div>
+
+        <div class="info">
+            <span class="label">Manufacturing Location</span>
+            <span class="value">Bulandshahr, Uttar Pradesh, India</span>
+        </div>
+
+        <div class="info">
+            <span class="label">Product Category</span>
+            <span class="value">Sportswear</span>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- MANUFACTURING PROCESS -->
+
+    <div class="card">
+
+        <div class="title">
+            MANUFACTURING PROCESS
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="number">01</div>
+                <div>
+                    <h3>Material Selection</h3>
+                    <p>
+                        Selected fabrics and materials are checked
+                        before entering the production process.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="number">02</div>
+                <div>
+                    <h3>Cutting</h3>
+                    <p>
+                        Fabric is measured and precisely cut according
+                        to the required product specifications.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="number">03</div>
+                <div>
+                    <h3>Stitching & Assembly</h3>
+                    <p>
+                        Individual components are assembled with
+                        controlled stitching and finishing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="number">04</div>
+                <div>
+                    <h3>Quality Inspection</h3>
+                    <p>
+                        Finished products are inspected for construction,
+                        appearance and visible defects.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="number">05</div>
+                <div>
+                    <h3>Final Finishing</h3>
+                    <p>
+                        Products are finished, packed and prepared
+                        for final dispatch.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div class="verified">
+            ✓ PRODUCT INFORMATION VERIFIED
+        </div>
+
+        <p style="margin-top:12px;">
+            Manufactured by <strong>GK GARMENTS</strong>
+        </p>
+
+        <p>
+            © <span id="year"></span> ZORIX
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+document.getElementById("year").innerText =
+new Date().getFullYear();
+
+/*
+   QR ke URL me aise product code bhej sakte ho:
+
+   ?code=ZRX-4582
+
+   Example:
+   yourwebsite.com/?code=ZRX-4582
+*/
+
+const params = new URLSearchParams(window.location.search);
+
+if(params.get("code")){
+    document.getElementById("productCode").innerText =
+    params.get("code");
+}
+
+</script>
+
+</body>
+</html>
