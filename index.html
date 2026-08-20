@@ -3,381 +3,429 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ZORIX | Manufacturing Details</title>
+<title>ZORIX — Product Verification</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f5f3;
-    color:#101c2d;
+body {
+    background: #050607;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
-.top{
-    height:5px;
-    background:#f5c400;
+.page {
+    width: 100%;
+    max-width: 520px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 22px 18px 35px;
+    background:
+        radial-gradient(circle at 90% 0%, rgba(220,175,45,.18), transparent 30%),
+        radial-gradient(circle at 0% 40%, rgba(255,255,255,.04), transparent 30%);
 }
 
-.container{
-    max-width:650px;
-    margin:auto;
-    padding:25px 18px 40px;
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 3px 28px;
 }
 
-/* Header */
-
-.header{
-    background:#10294b;
-    border-radius:18px;
-    padding:28px 25px;
-    color:white;
-    text-align:center;
-    box-shadow:0 12px 35px rgba(0,0,0,.12);
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
 }
 
-.logo{
-    font-size:38px;
-    font-weight:900;
-    font-style:italic;
-    letter-spacing:-2px;
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
-.tagline{
-    font-size:9px;
-    letter-spacing:2px;
-    color:#f5c400;
-    margin-top:3px;
-    font-weight:bold;
+.brand h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
 }
 
-.header-line{
-    width:45px;
-    height:3px;
-    background:#f5c400;
-    margin:18px auto;
+.brand p {
+    margin-top: 3px;
+    font-size: 8px;
+    letter-spacing: 1.7px;
+    color: #929292;
 }
 
-.header h2{
-    font-size:20px;
-    margin-bottom:7px;
+.more {
+    color: #777;
+    font-size: 20px;
+    letter-spacing: 3px;
 }
 
-.header p{
-    font-size:12px;
-    color:#cbd4df;
+/* HERO */
+
+.hero {
+    padding: 25px 4px 28px;
 }
 
-/* Main */
-
-.card{
-    background:white;
-    margin-top:18px;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
+.kicker {
+    color: #d8ae38;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
 }
 
-.title{
-    font-size:11px;
-    font-weight:bold;
-    letter-spacing:2px;
-    color:#b08b00;
-    margin-bottom:18px;
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.02;
+    letter-spacing: -1.8px;
+    margin-bottom: 15px;
 }
 
-.info{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding:15px 0;
-    border-bottom:1px solid #e8e8e8;
+.hero > p {
+    color: #999da3;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
-.info:last-child{
-    border-bottom:none;
+/* VERIFIED BOX */
+
+.verified {
+    margin-top: 25px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border-radius: 21px;
+    border: 1px solid rgba(218,174,55,.4);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(218,174,55,.13),
+            rgba(255,255,255,.025)
+        );
 }
 
-.label{
-    color:#7b8189;
-    font-size:11px;
+.check {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #d8ae38;
+    color: #111;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 25px;
+    font-weight: 900;
 }
 
-.value{
-    font-size:13px;
-    font-weight:bold;
-    text-align:right;
+.verified b {
+    font-size: 13px;
+    letter-spacing: .2px;
 }
 
-/* Manufacturing */
-
-.steps{
-    margin-top:5px;
+.verified span {
+    display: block;
+    margin-top: 5px;
+    color: #8e9196;
+    font-size: 10px;
 }
 
-.step{
-    display:flex;
-    gap:15px;
-    padding:17px 0;
-    border-bottom:1px solid #eee;
+/* DETAILS CARD */
+
+.card {
+    margin-top: 15px;
+    padding: 21px;
+
+    background: #0d0f12;
+    border: 1px solid #202328;
+    border-radius: 21px;
 }
 
-.step:last-child{
-    border-bottom:none;
+.card-title {
+    margin-bottom: 13px;
+
+    color: #d8ae38;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2.3px;
 }
 
-.number{
-    min-width:32px;
-    height:32px;
-    border-radius:50%;
-    background:#10294b;
-    color:#f5c400;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:11px;
-    font-weight:bold;
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 14px 0;
+    border-bottom: 1px solid #1d2024;
 }
 
-.step h3{
-    font-size:14px;
-    margin-bottom:5px;
+.row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
-.step p{
-    color:#777;
-    font-size:11px;
-    line-height:1.6;
+.label {
+    color: #72767c;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Footer */
+.value {
+    max-width: 62%;
 
-.footer{
-    text-align:center;
-    margin-top:22px;
-    color:#777;
-    font-size:9px;
-    line-height:1.7;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.45;
 }
 
-.footer strong{
-    color:#10294b;
+/* BRAND STANDARD */
+
+.standard {
+    margin-top: 15px;
+    padding: 22px;
+
+    border-radius: 21px;
+    border: 1px solid #202328;
+
+    background: linear-gradient(
+        145deg,
+        #111417,
+        #0a0c0f
+    );
 }
 
-.verified{
-    display:inline-block;
-    margin-top:10px;
-    padding:7px 13px;
-    border-radius:30px;
-    background:#10294b;
-    color:white;
-    font-size:9px;
-    font-weight:bold;
+.standard h3 {
+    margin-bottom: 8px;
+
+    font-size: 21px;
+    letter-spacing: -.5px;
 }
 
-@media(max-width:450px){
+.standard p {
+    color: #92969b;
+    font-size: 11px;
+    line-height: 1.75;
+}
 
-    .container{
-        padding:15px 12px 30px;
-    }
+/* FOOTER */
 
-    .header{
-        padding:25px 18px;
-    }
+footer {
+    padding-top: 28px;
 
-    .logo{
-        font-size:34px;
-    }
+    text-align: center;
+    color: #50545a;
 
-    .card{
-        padding:20px;
-    }
+    font-size: 8px;
+    letter-spacing: 1.4px;
+}
 
-    .info{
-        gap:10px;
+footer strong {
+    color: #888;
+}
+
+/* MOBILE */
+
+@media(max-width:370px) {
+    .hero h1 {
+        font-size: 35px;
     }
 }
 </style>
 </head>
 
+
 <body>
 
-<div class="top"></div>
+<div class="page">
 
-<div class="container">
+    <!-- HEADER -->
+    <header>
 
-    <!-- BRAND HEADER -->
+        <div class="brand">
 
-    <div class="header">
+            <!-- Apna logo "logo.jpg" naam se isi folder me rakho -->
+            <img
+                class="logo"
+                src="logo.png"
+                alt="ZORIX Logo"
+            >
 
-        <div class="logo">ZORIX</div>
+            <div>
+                <h2>ZORIX</h2>
+                <p>THE NEW ERA OF SPORTS</p>
+            </div>
 
-        <div class="tagline">
-            THE NEW ERA OF SPORTS
         </div>
 
-        <div class="header-line"></div>
+        <div class="more">•••</div>
 
-        <h2>Manufacturing Details</h2>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="kicker">
+            PRODUCT AUTHENTICITY
+        </div>
+
+        <h1>
+            Built for the<br>
+            next generation.
+        </h1>
 
         <p>
-            Product manufacturing & quality information
+            Welcome to the official ZORIX product information
+            page. Scan this tag to view the brand and
+            manufacturing details.
         </p>
 
-    </div>
 
+        <!-- VERIFIED -->
+        <div class="verified">
 
-    <!-- MANUFACTURER DETAILS -->
-
-    <div class="card">
-
-        <div class="title">
-            MANUFACTURER INFORMATION
-        </div>
-
-        <div class="info">
-            <span class="label">Brand</span>
-            <span class="value">ZORIX</span>
-        </div>
-
-        <div class="info">
-            <span class="label">Manufactured By</span>
-            <span class="value">ZORIX Sports Wear</span>
-        </div>
-
-        <div class="info">
-            <span class="label">Manufacturing Location</span>
-            <span class="value">Bulandshahr, Uttar Pradesh, India</span>
-        </div>
-
-        <div class="info">
-            <span class="label">Owner Name</span>
-            <span class="value">Ashok</span>
-        </div>
-
-
-
-    </div>
-
-
-    <!-- MANUFACTURING PROCESS -->
-
-    <div class="card">
-
-        <div class="title">
-            MANUFACTURING PROCESS
-        </div>
-
-        <div class="steps">
-
-            <div class="step">
-                <div class="number">01</div>
-                <div>
-                    <h3>Material Selection</h3>
-                    <p>
-                        Selected fabrics and materials are checked
-                        before entering the production process.
-                    </p>
-                </div>
+            <div class="check">
+                ✓
             </div>
 
-            <div class="step">
-                <div class="number">02</div>
-                <div>
-                    <h3>Cutting</h3>
-                    <p>
-                        Fabric is measured and precisely cut according
-                        to the required product specifications.
-                    </p>
-                </div>
-            </div>
+            <div>
+                <b>
+                    PRODUCT INFORMATION VERIFIED
+                </b>
 
-            <div class="step">
-                <div class="number">03</div>
-                <div>
-                    <h3>Stitching & Assembly</h3>
-                    <p>
-                        Individual components are assembled with
-                        controlled stitching and finishing.
-                    </p>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="number">04</div>
-                <div>
-                    <h3>Quality Inspection</h3>
-                    <p>
-                        Finished products are inspected for construction,
-                        appearance and visible defects.
-                    </p>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="number">05</div>
-                <div>
-                    <h3>Final Finishing</h3>
-                    <p>
-                        Products are finished, packed and prepared
-                        for final dispatch.
-                    </p>
-                </div>
+                <span>
+                    Official ZORIX brand information
+                </span>
             </div>
 
         </div>
 
-    </div>
+    </section>
+
+
+    <!-- MANUFACTURING DETAILS -->
+    <section class="card">
+
+        <div class="card-title">
+            MANUFACTURING DETAILS
+        </div>
+
+
+        <div class="row">
+            <span class="label">
+                Brand
+            </span>
+
+            <span class="value">
+                ZORIX
+            </span>
+        </div>
+
+
+        <div class="row">
+            <span class="label">
+                Manufacturer
+            </span>
+
+            <span class="value">
+                ZORIX SPORTS WEARS
+            </span>
+        </div>
+
+
+        <div class="row">
+            <span class="label">
+                Owner
+            </span>
+
+            <span class="value">
+                Ashok
+            </span>
+        </div>
+
+
+        <div class="row">
+            <span class="label">
+                Location
+            </span>
+
+            <span class="value">
+                Bulandshahr, Uttar Pradesh(203001)
+            </span>
+        </div>
+
+
+        <div class="row">
+            <span class="label">
+                Country
+            </span>
+
+            <span class="value">
+                India
+            </span>
+        </div>
+
+
+        <div class="row">
+            <span class="label">
+                Product Category
+            </span>
+
+            <span class="value">
+                Sports Wear
+            </span>
+        </div>
+
+    </section>
+
+
+    <!-- BRAND STANDARD -->
+    <section class="standard">
+
+        <h3>
+            THE ZORIX STANDARD.
+        </h3>
+
+        <p>
+            Designed around sport, movement and a modern
+            performance mindset. Every ZORIX product carries
+            the identity of the brand and its manufacturing origin.
+        </p>
+
+    </section>
 
 
     <!-- FOOTER -->
+    <footer>
 
-    <div class="footer">
+        <strong>ZORIX</strong>
+        &nbsp;•&nbsp;
+        THE NEW ERA OF SPORTS
 
-        <div class="verified">
-            ✓ PRODUCT INFORMATION VERIFIED
-        </div>
+        <br><br>
 
-        <p style="margin-top:12px;">
-            Manufactured by <strong>GK GARMENTS</strong>
-        </p>
+        © 2026 ZORIX SPORTS WEARS
 
-        <p>
-            © <span id="year"></span> ZORIX
-        </p>
-
-    </div>
+    </footer>
 
 </div>
-
-
-<script>
-
-document.getElementById("year").innerText =
-new Date().getFullYear();
-
-/*
-   QR ke URL me aise product code bhej sakte ho:
-
-   ?code=ZRX-4582
-
-   Example:
-   yourwebsite.com/?code=ZRX-4582
-*/
-
-const params = new URLSearchParams(window.location.search);
-
-if(params.get("code")){
-    document.getElementById("productCode").innerText =
-    params.get("code");
-}
-
-</script>
 
 </body>
 </html>
